@@ -1,0 +1,354 @@
+/* =========================================
+   Café Aroma — Styles
+   ========================================= */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --brown-dark:  #3b1f0e;
+  --brown-mid:   #6b3a2a;
+  --brown-light: #a0522d;
+  --cream:       #fdf6ec;
+  --cream-dark:  #f0e0c8;
+  --text-dark:   #2c1a0e;
+  --text-mid:    #5a3e2b;
+  --accent:      #c8853a;
+  --white:       #ffffff;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background-color: var(--cream);
+  color: var(--text-dark);
+  line-height: 1.7;
+}
+
+/* ---- NAVBAR ---- */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--brown-dark);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--cream);
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: var(--cream-dark);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+/* The .btn div looks like a button visually */
+.btn {
+  background-color: var(--accent);
+  color: var(--white);
+  padding: 0.5rem 1.2rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: var(--brown-light);
+}
+
+/* ---- HERO ---- */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, var(--brown-dark) 0%, var(--brown-mid) 100%);
+  color: var(--white);
+  gap: 2rem;
+}
+
+.hero-content {
+  max-width: 520px;
+}
+
+/* .title div looks like a heading visually */
+.title {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--cream);
+  font-weight: bold;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: var(--cream-dark);
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--accent);
+  color: var(--white);
+  padding: 0.8rem 2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+.cta-button:hover {
+  background-color: var(--cream-dark);
+  color: var(--brown-dark);
+}
+
+.hero-image img {
+  width: 420px;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
+
+/* ---- ABOUT ---- */
+.about {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding: 4rem 2rem;
+  background-color: var(--cream-dark);
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  color: var(--brown-dark);
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  color: var(--text-mid);
+  margin-bottom: 0.8rem;
+}
+
+.about-image img {
+  width: 380px;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+/* ---- MENU ---- */
+.menu {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: var(--cream);
+}
+
+.menu h2 {
+  font-size: 2.2rem;
+  color: var(--brown-dark);
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  color: var(--text-mid);
+  margin-bottom: 2.5rem;
+  font-size: 1rem;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.menu-card {
+  background-color: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(59,31,14,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-align: left;
+}
+
+.menu-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 24px rgba(59,31,14,0.18);
+}
+
+.menu-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.menu-card h3 {
+  font-size: 1.1rem;
+  color: var(--brown-dark);
+  padding: 1rem 1rem 0.3rem;
+}
+
+.menu-card p {
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  padding: 0 1rem 0.8rem;
+}
+
+.price {
+  display: block;
+  padding: 0 1rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+/* ---- PROMO SECTION ---- */
+.promo {
+  background: linear-gradient(135deg, var(--brown-mid) 0%, var(--brown-light) 100%);
+  padding: 4rem 2rem;
+  text-align: center;
+  color: var(--white);
+}
+
+.promo-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.promo-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.promo-content p {
+  color: var(--cream-dark);
+  margin-bottom: 1.8rem;
+}
+
+.promo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.promo-form input {
+  width: 100%;
+  max-width: 420px;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+  background-color: var(--cream);
+  color: var(--text-dark);
+}
+
+.promo-form input:focus {
+  outline: 2px solid var(--accent);
+}
+
+.promo-form button {
+  padding: 0.75rem 2rem;
+  background-color: var(--brown-dark);
+  color: var(--cream);
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.promo-form button:hover {
+  background-color: var(--text-dark);
+}
+
+/* ---- FOOTER ---- */
+.footer {
+  background-color: var(--brown-dark);
+  color: var(--cream-dark);
+  padding: 2rem;
+  text-align: center;
+}
+
+.footer-brand {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: var(--cream);
+}
+
+.footer p {
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+.footer-copy {
+  color: var(--brown-light);
+  font-size: 0.8rem;
+  margin-top: 0.8rem;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .hero-image img {
+    width: 100%;
+  }
+
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 100%;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    padding: 1rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+}
