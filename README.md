@@ -1,23 +1,45 @@
-# Audit Project — Café Aroma
+# Audit Project — Portafolio generado por IA
 
-Este proyecto fue generado por IA como parte del curso **"Dirigir IA para construir productos web reales"**.
+Este es un portafolio web generado con IA. Visualmente parece correcto y funciona, pero contiene problemas reales en 5 áreas clave del desarrollo.
 
-## Tu misión
+## Tu tarea
 
-Este es un sitio web real que fue creado con inteligencia artificial. Tiene **5 problemas** escondidos en el código. Tu trabajo es encontrarlos usando el checklist de auditoría del módulo.
+Audita este proyecto como si fuera código de producción. Usa el checklist del módulo y tu asistente de IA para revisar el código en tu editor.
 
-## Cómo usarlo
+### Áreas a auditar
 
-1. Descarga o clona este repositorio
-2. Abre `index.html` en tu navegador (o usa Live Server en VS Code)
-3. Revisa el código con tu IA y el checklist del curso
-4. Identifica los 5 problemas y cómo corregirlos
+1. **Accesibilidad** — ¿El sitio es usable para todos?
+2. **Seguridad** — ¿Hay datos sensibles expuestos o vulnerabilidades?
+3. **SEO** — ¿Está optimizado para buscadores?
+4. **Performance** — ¿Se usan las herramientas correctas para el stack?
+5. **Buenas prácticas** — ¿Sigue los estándares modernos de Next.js?
 
-## Áreas a revisar
+## Cómo trabajar
 
-- Accesibilidad (imágenes, navegación por teclado)
-- HTML semántico (estructura de encabezados)
-- Seguridad (código JavaScript en atributos inline)
-- Formularios (asociación correcta de etiquetas)
+1. Clona este repositorio y ábrelo en tu editor
+2. Revisa el código con tu asistente de IA usando el checklist del módulo
+3. Documenta cada problema que encuentres: qué es, dónde está y cómo lo corregirías
+4. Escribe un informe con tus hallazgos
 
-> **Pista:** El sitio se ve bien en el navegador. Los problemas están en el código, no en la apariencia visual.
+## Estructura del proyecto
+
+```
+app/
+  layout.tsx        # Root layout
+  page.tsx          # Página principal
+  globals.css       # Estilos globales
+  api/
+    contact/
+      route.ts      # API endpoint de contacto
+components/
+  ContactForm.tsx   # Formulario de contacto
+```
+
+## Setup
+
+```bash
+npm install
+npm run dev
+```
+
+Abre [http://localhost:3000](http://localhost:3000) para ver el sitio.
