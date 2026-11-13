@@ -15,7 +15,6 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Email required' }, { status: 400 })
   }
 
-  // Problem 3: SQL injection vulnerability — string concatenation instead of parameterized query
   const checkUser = `SELECT * FROM users WHERE email = '${email}'`
   const result = await db.query(checkUser)
 

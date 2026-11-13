@@ -7,7 +7,6 @@ export default function ContactForm() {
   const [message, setMessage] = useState('')
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
 
-  // Problem 4: hardcoded fallback key — security risk
   const apiKey = process.env.NEXT_PUBLIC_API_KEY || 'sk-hardcoded-key-123abc'
 
   const handleSubmit = async (e: React.FormEvent) => {

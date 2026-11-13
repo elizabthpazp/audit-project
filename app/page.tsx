@@ -50,7 +50,6 @@ export default function Home() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {projects.map((project) => (
             <div key={project.id} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-              {/* Problem 1: <img> without alt attribute — accessibility issue */}
               <img src={project.src} className="w-full h-48 object-cover" />
               <div className="p-4">
                 <h3 className="font-semibold text-lg mb-1">{project.title}</h3>
@@ -75,7 +74,6 @@ export default function Home() {
           Estoy disponible para proyectos freelance y oportunidades full-time.
           Cuéntame tu idea y lo construimos.
         </p>
-        {/* Problem 2: div acting as button — not keyboard accessible, no role */}
         <div
           onClick={() => window.location.href = '/contact'}
           className="cursor-pointer bg-blue-600 text-white px-8 py-3 rounded-lg inline-block hover:bg-blue-700"
